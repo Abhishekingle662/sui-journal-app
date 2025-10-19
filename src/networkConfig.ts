@@ -13,6 +13,8 @@ const { networkConfig, useNetworkVariable, useNetworkVariables } =
       url: getFullnodeUrl("devnet"),
       variables: {
         counterPackageId: DEVNET_COUNTER_PACKAGE_ID,
+        journalPackageId: "0xTODO", // Placeholder for devnet
+        graphqlUrl: "https://graphql.devnet.sui.io/graphql",
       },
     },
     testnet: {
@@ -20,14 +22,15 @@ const { networkConfig, useNetworkVariable, useNetworkVariables } =
       variables: {
         counterPackageId: TESTNET_COUNTER_PACKAGE_ID,
         journalPackageId: TESTNET_JOURNAL_PACKAGE_ID,
+        graphqlUrl: "https://graphql.testnet.sui.io/graphql",
       },
     },
     mainnet: {
       url: getFullnodeUrl("mainnet"),
       variables: {
         counterPackageId: MAINNET_COUNTER_PACKAGE_ID,
+        journalPackageId: "0xTODO", // Placeholder for mainnet
+        graphqlUrl: "https://graphql.mainnet.sui.io/graphql",
       },
     },
-  });
-
-export { useNetworkVariable, useNetworkVariables, networkConfig };
+  });export { useNetworkVariable, useNetworkVariables, networkConfig };
